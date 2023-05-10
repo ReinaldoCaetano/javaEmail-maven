@@ -34,7 +34,7 @@ public class EnviaEmail {
 
 //
 
-	public void enviarEmail() throws Exception {
+	public void enviarEmail(boolean envioHtml) throws Exception {
 		
 		Properties properties = new Properties();
 		
@@ -60,8 +60,12 @@ public class EnviaEmail {
 		message.setFrom(new InternetAddress(userName , nomeRemetente)); //quem esta enviando
 		message.setRecipients(Message.RecipientType.TO, toUser); // email destino
 		message.setSubject(assuntoEmail); //assunto do email
-		message.setText(textoEmail); // texto do email
 		
+		if(envioHtml) {
+			message.setContent(textoEmail, "text/html; charset=utf-8");
+		}else {
+			message.setText(textoEmail); // texto do email
+		}
 		Transport.send(message);
 	}
 }
