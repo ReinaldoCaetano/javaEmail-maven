@@ -26,7 +26,7 @@ public class AppTest {
 		EnviaEmail enviaEmail = new EnviaEmail("reinaldo.caetano@fatec.sp.gov.br", "Reinaldo Developer Java"
 				, "Testando Assunto Email", stringBuilderTextoEmail.toString());
 		
-		enviaEmail.enviarEmail(true);
+		enviaEmail.enviarEmailAnexo(true);
 		
 		
 	}
