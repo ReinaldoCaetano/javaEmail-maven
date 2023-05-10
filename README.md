@@ -1,0 +1,1 @@
+# javaEmail-maven
