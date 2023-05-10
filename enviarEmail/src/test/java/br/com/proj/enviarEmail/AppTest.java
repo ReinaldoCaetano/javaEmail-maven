@@ -1,20 +1,20 @@
 package br.com.proj.enviarEmail;
 
-import static org.junit.Assert.assertTrue;
-
 import org.junit.Test;
 
-/**
- * Unit test for simple App.
- */
-public class AppTest 
-{
-    /**
-     * Rigorous Test :-)
-     */
-    @Test
-    public void shouldAnswerWithTrue()
-    {
-        assertTrue( true );
-    }
+
+public class AppTest {
+
+	
+	@Test
+	public void testeEmail() throws Exception {
+
+		
+		EnviaEmail enviaEmail = new EnviaEmail("reinaldo.caetano@fatec.sp.gov.br, reinaldovcaetano@gmail.com", "Reinaldo Developer Java"
+				, "Testando Assunto Email", "Esse é o texto do email para teste");
+		
+		enviaEmail.enviarEmail();
+		
+		
+	}
 }
